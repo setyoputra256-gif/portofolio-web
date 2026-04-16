@@ -25,11 +25,11 @@
 
     <!-- STEP 1 -->
     <div class="step-content active">
-      <h2>Data Nasabah</h2>
+      <center><h2>Data Nasabah</h2></center>
       <label>Nama Lengkap</label>
-      <input id="nama">
+      <input type="text" id="nama" placeholder="Tuliskan nama di sini...">
       <label>Nomor Rekening</label>
-      <input id="rekening">
+      <input type="number" id="rekening" placeholder="Contoh: 0123456789">
       <button type="button" class="primary" onclick="next()">Lanjut</button>
     
   
@@ -41,25 +41,33 @@
 
     <!-- STEP 2 -->
     <div class="step-content">
+      <center>
       <h2>Berikan Penilaian Anda</h2>
       <p class="desc">Pendapat Anda sangat berarti bagi kami</p>
 
-      <label>Kepuasan Layanan</label>
+      <label>Kepuasan Layanan</label> </center>
       <div class="emoji-group" id="layanan">
-        <div class="emoji" data-v="1">😫<span>Sangat Tidak Puas</span></div>
-        <div class="emoji" data-v="2">🙁<span>Tidak Puas</span></div>
-        <div class="emoji" data-v="3">😐<span>Cukup</span></div>
-        <div class="emoji" data-v="4">😊<span>Puas</span></div>
-        <div class="emoji" data-v="5">😄<span>Sangat Puas</span></div>
+        <div class="emoji" data-v="1">😫</div>
+        <div class="emoji" data-v="2">🙁</div>
+        <div class="emoji" data-v="3">😐</div>
+        <div class="emoji" data-v="4">😊</div>
+        <div class="emoji" data-v="5">😄</div>
       </div>
 
-      <label style="margin-top:20px">Kepuasan Produk (1–10)</label>
-      <div class="grid" id="produk"></div>
-
-      <label style="margin-top:20px">Kepuasan Kecepatan (1–10)</label>
-      <div class="grid" id="kecepatan"></div>
-
+    <div class="form-group">
+    <label for="saran">Saran / Masukan</label>
+      <textarea 
+    id="saran" 
+    name="saran" placeholder="Tulis saran Anda di sini..." 
+    maxlength="250"
+  ></textarea>
+  <div class="saran-footer">
+    <small id="charCount">0 / 250</small>
+  </div>
+    </div>
+   
       <form id="formPenilaian">
+    
           <div class="actions">
               <button type="button" class="secondary" onclick="prev()">Kembali</button>
               <button type="button" class="primary" onclick="kirimData()">Kirim Penilaian</button>
@@ -74,16 +82,26 @@
 
     <!-- STEP 3 -->
 <div class="step-content">
- <div class="card">
-  <div class="success-icon">
-    <span>&#10003;</span>
+<div class="card">
+<div class="success-icon" style="width: 120px; height: 120px;">
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    width="60" 
+    height="60" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    stroke-width="3">
+    <path d="m4.5 12.75 6 6 9-13.5" />
+  </svg>
   </div>
+
   
-  <h2>Terima Kasih!</h2>
+  <center><h2>Terima Kasih!</h2></center>
   <p>Terima kasih atas penilaian yang Anda berikan. Masukan Anda sangat berharga bagi kami untuk terus meningkatkan kualitas layanan Bank Gresik.</p>
   
 
-<button type="button" class="btn-back" onclick="resetKeStepSatu()">Kembali ke Awal</button>
+<center><button type="button" onclick="kembaliKeAwal()" class="btn-kembali">Kembali</button></center>
 </div>
 
 

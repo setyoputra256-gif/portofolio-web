@@ -6,17 +6,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nama      = mysqli_real_escape_string($conn, $_POST['nama']);
     $rekening  = mysqli_real_escape_string($conn, $_POST['rekening']);
     $layanan   = mysqli_real_escape_string($conn, $_POST['layanan']);
-    $produk    = mysqli_real_escape_string($conn, $_POST['produk']);
-    $kecepatan = mysqli_real_escape_string($conn, $_POST['kecepatan']);
+    $saran    = mysqli_real_escape_string($conn, $_POST['saran']);
+    
 
     // Query (Gunakan tanda kutip yang benar)
-    $sql = "INSERT INTO penilaian (nama, rekening, layanan, produk, kecepatan) 
-            VALUES ('$nama', '$rekening', '$layanan', '$produk', '$kecepatan')";
+    $sql = "INSERT INTO penilaian (nama, rekening, layanan, saran) 
+            VALUES ('$nama', '$rekening', '$layanan', '$saran')";
 
     if (mysqli_query($conn, $sql)) {
         echo "sukses"; 
     } else {
-        echo "Error: " . mysqli_error($conn);
+        echo "error: " . mysqli_error($conn);
     }
 }
 mysqli_close($conn);
