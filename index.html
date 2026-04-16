@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bank Gresik – Penilaian Layanan</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="wrapper">
+
+  <div class="logo">Bank Gresik</div>
+  <div class="subtitle">Sistem Penilaian Layanan</div>
+
+  <div class="steps">
+    <div class="step active">1</div><div class="line"></div>
+    <div class="step">2</div><div class="line"></div>
+    <div class="step">3</div>
+  </div>
+
+  <div class="card">
+    
+
+    <!-- STEP 1 -->
+    <div class="step-content active">
+      <h2>Data Nasabah</h2>
+      <label>Nama Lengkap</label>
+      <input id="nama">
+      <label>Nomor Rekening</label>
+      <input id="rekening">
+      <button type="button" class="primary" onclick="next()">Lanjut</button>
+    
+  
+      <footer class="card-footer">
+        © 2026 Bank Gresik. Semua hak dilindungi.
+    </footer>
+   </div>
+  
+
+    <!-- STEP 2 -->
+    <div class="step-content">
+      <h2>Berikan Penilaian Anda</h2>
+      <p class="desc">Pendapat Anda sangat berarti bagi kami</p>
+
+      <label>Kepuasan Layanan</label>
+      <div class="emoji-group" id="layanan">
+        <div class="emoji" data-v="1">😫<span>Sangat Tidak Puas</span></div>
+        <div class="emoji" data-v="2">🙁<span>Tidak Puas</span></div>
+        <div class="emoji" data-v="3">😐<span>Cukup</span></div>
+        <div class="emoji" data-v="4">😊<span>Puas</span></div>
+        <div class="emoji" data-v="5">😄<span>Sangat Puas</span></div>
+      </div>
+
+      <label style="margin-top:20px">Kepuasan Produk (1–10)</label>
+      <div class="grid" id="produk"></div>
+
+      <label style="margin-top:20px">Kepuasan Kecepatan (1–10)</label>
+      <div class="grid" id="kecepatan"></div>
+
+      <form id="formPenilaian">
+          <div class="actions">
+              <button type="button" class="secondary" onclick="prev()">Kembali</button>
+              <button type="button" class="primary" onclick="kirimData()">Kirim Penilaian</button>
+          </div>
+      </form>
+
+  <footer class="card-footer">
+        © 2026 Bank Gresik. Semua hak dilindungi.
+    </footer>
+</div>
+
+
+    <!-- STEP 3 -->
+<div class="step-content">
+ <div class="card">
+  <div class="success-icon">
+    <span>&#10003;</span>
+  </div>
+  
+  <h2>Terima Kasih!</h2>
+  <p>Terima kasih atas penilaian yang Anda berikan. Masukan Anda sangat berharga bagi kami untuk terus meningkatkan kualitas layanan Bank Gresik.</p>
+  
+
+<button type="button" class="btn-back" onclick="resetKeStepSatu()">Kembali ke Awal</button>
+</div>
+
+
+<footer class="card-footer">
+        © 2026 Bank Gresik. Semua hak dilindungi.
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
